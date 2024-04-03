@@ -1,6 +1,6 @@
 import React from "react";
 
-const TabButton = ({ active, selectTab, children }) => {
+const TabButton = ({ selectTab, active , children }) => {
   const buttonClasses = active
     ? 'text-white border-b border-violet-500'
     : 'text-[#ADB7BE]';

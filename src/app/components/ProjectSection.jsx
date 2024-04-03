@@ -10,7 +10,7 @@ const projectData = [
     description: "Clone of D-Mart web Application using HTML and CSS",
     image: "/images/projects/img2.png",
     tag: ["All", "web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/harshanand2021/D-Mart_Clone.git",
     previewUrl: "/",
   },
   {
@@ -19,7 +19,7 @@ const projectData = [
     description: "React JS project of VTU university web application",
     image: "/images/projects/img1.png",
     tag: ["All", "web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/harshanand2021/vtu_project.git",
     previewUrl: "/",
   },
 ];

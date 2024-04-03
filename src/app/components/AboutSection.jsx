@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useTransition } from "react";
+import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
@@ -29,8 +29,8 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Certification",
+    id: "certification",
     content: (
       <ul className="list-disc pl-2">
         <li>
@@ -57,30 +57,44 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image
+          src="/images/about-image.png"
+          width={500}
+          height={500}
+          priority
+          alt="about-section-img"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          Hello, I'm Harsh Anand, a seasoned full-stack Java developer. With a passion for crafting robust and efficient software solutions, I thrive in the dynamic realm of web development. Equipped with comprehensive expertise in both front-end and back-end technologies, I specialize in leveraging Java to build scalable and innovative applications. My dedication to delivering high-quality code and my constant drive for learning ensure that I stay at the forefront of technological advancements. Let's collaborate and create impactful solutions together.
+            Hello, I'm Harsh Anand, a seasoned full-stack Java developer. With a
+            passion for crafting robust and efficient software solutions, I
+            thrive in the dynamic realm of web development. Equipped with
+            comprehensive expertise in both front-end and back-end technologies,
+            I specialize in leveraging Java to build scalable and innovative
+            applications. My dedication to delivering high-quality code and my
+            constant drive for learning ensure that I stay at the forefront of
+            technological advancements. Let's collaborate and create impactful
+            solutions together.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+              active={tab == "skills"}
             >
               {" "}
               Skills{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
+              active={tab == "education"}
             >
               {" "}
               Education{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("certification")}
+              active={tab == "certification"}
             >
               {" "}
               Certifications{" "}
